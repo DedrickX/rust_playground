@@ -32,7 +32,6 @@ impl Stats {
 }
 
 pub fn test() {
-    println!("\n------------------");
     let mut monster = Monster {
         stats: Stats { hp: 10, sp: 10 },
         friends: vec![Friend { loyality: 2 }, Friend { loyality: 1 }],

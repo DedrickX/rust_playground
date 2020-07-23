@@ -17,7 +17,6 @@ impl Player {
 }
 
 pub fn test() {
-    println!("\n------------------");
     let mut player1 = Player::new();
     let old_score = player1.score();
     player1.set_score(old_score + 3);

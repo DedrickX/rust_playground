@@ -1,5 +1,4 @@
 pub fn test() {
-    println!("\n------------------");
     let mut list = vec![1, 2, 3];
 
     {

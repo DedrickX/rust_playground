@@ -9,7 +9,6 @@ fn pour(source: &mut Bucket, target: &mut Bucket, amount: u32) {
 }
 
 pub fn test() {
-    println!("\n------------------");
     let mut bucket1 = Bucket { liters: 20 };
     let mut bucket2 = Bucket { liters: 10 };
 

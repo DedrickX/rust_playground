@@ -1,7 +1,6 @@
 use std::collections::HashMap;
 
 pub fn test() {
-    println!("\n------------------");
     let text = "hello world hello";
 
     let mut freqs = HashMap::new();
