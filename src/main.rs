@@ -8,6 +8,7 @@ mod buckets;
 mod drop_example;
 mod errors;
 mod game;
+mod generic_lifetimes;
 mod lifetimes;
 mod player;
 mod vectors;
@@ -48,6 +49,10 @@ fn main() {
     lifetimes::return_list_example();
 
     splitter();
+    generic_lifetimes::game();
+
+    splitter();
+    generic_lifetimes::stemming_words();
 }
 
 fn splitter() {
