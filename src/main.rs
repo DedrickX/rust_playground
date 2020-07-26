@@ -8,6 +8,7 @@ mod buckets;
 mod drop_example;
 mod errors;
 mod game;
+mod lifetimes;
 mod player;
 mod vectors;
 mod word_counter;
@@ -32,13 +33,21 @@ fn main() {
     drop_example::test();
 
     splitter();
-    errors::test_result();
+    errors::result_type();
 
     splitter();
-    errors::test_option();
+    errors::option_type();
 
     splitter();
     errors::getting_result();
+
+    splitter();
+    lifetimes::lifetimes_simple();
+
+    splitter();
+    lifetimes::return_list_example();
+
+    splitter();
 }
 
 fn splitter() {

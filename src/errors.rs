@@ -11,11 +11,13 @@ impl Default for Person {
     }
 }
 
-pub fn test_result() {
-    let first = serde_json::from_str::<Person>(r#"{"name": "Dodko Dodovič"}"#);
+pub fn result_type() {
+    let correct_json = r#"{"name": "Dodko Dodovič"}"#;
+    let first = serde_json::from_str::<Person>(correct_json);
     println!("first = {:?}", first);
 
-    let second = serde_json::from_str::<Person>(r#"{"name": "Kokos, celé zle",}"#);
+    let incorrect_json = r#"{"name": "Kokos, celé zle",}"#;
+    let second = serde_json::from_str::<Person>(incorrect_json);
     println!("second = {:?}", second);
 }
 
@@ -29,7 +31,7 @@ pub fn getting_result() {
     println!("second's name is {:?}", second_inner.name);
 }
 
-pub fn test_option() {
+pub fn option_type() {
     let nonempty_list = vec!['a', 'b', 'c'];
     println!("nonempty_list's last is: {:?}", nonempty_list.last());
 
