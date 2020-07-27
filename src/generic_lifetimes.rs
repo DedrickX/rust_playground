@@ -20,7 +20,7 @@ struct Stemmer {
 }
 
 impl Stemmer {
-    fn stem(self, word: &str) -> &str {
+    fn stem<'a>(&self, word: &'a str) -> &'a str {
         if word.ends_with(&self.suffix) {
             let index = word.rfind(&self.suffix).expect("Should be found!");
             &word[0..index]
@@ -31,9 +31,10 @@ impl Stemmer {
 }
 
 pub fn stemming_words() {
-    let stemmer = Stemmer {
+    let word = String::from("Scammer");
+    let word_stemmer = Stemmer {
         suffix: String::from("mer"),
     };
-    let result = stemmer.stem("Scammer");
-    println!("Stemmed word is {}", result);
+    let result = word_stemmer.stem(&word);
+    println!("Word {} is stemmed to {}", word, result);
 }

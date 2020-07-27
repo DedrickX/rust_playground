@@ -10,11 +10,15 @@ mod errors;
 mod game;
 mod generic_lifetimes;
 mod lifetimes;
+mod moving;
 mod player;
 mod vectors;
 mod word_counter;
 
 fn main() {
+    splitter();
+    moving::test();
+
     splitter();
     buckets::test();
 
