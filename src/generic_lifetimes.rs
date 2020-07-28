@@ -15,6 +15,8 @@ pub fn game() {
     println!("Game {} vs {} winner: {}", home, visitors, winner);
 }
 
+// --------------------------------------------------------------
+
 struct Stemmer {
     suffix: String,
 }
@@ -35,6 +37,10 @@ pub fn stemming_words() {
     let word_stemmer = Stemmer {
         suffix: String::from("mer"),
     };
+
     let result = word_stemmer.stem(&word);
+    let result2 = word_stemmer.stem(&word);
+
     println!("Word {} is stemmed to {}", word, result);
+    println!("Word {} is stemmed again to {}", word, result2);
 }

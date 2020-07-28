@@ -4,11 +4,13 @@ pub fn test() {
 
     println!("Value a = {}, value b = {}", a, b);
 
-    let arr1 = vec![1, 2, 3];
-    let arr2 = arr1; // this is move!!!
+    let s1 = "hello";
+    let s2 = s1;
 
-    // can not use value arr1, it was moved to arr2.
-    // println!("Value arr1 = {:?}, value arr2 = {:?}", arr1, arr2);
+    println!("Value s1 = {}, value s2 = {}", s1, s2);
 
-    println!("Value arr2 = {:?}", arr2);
+    let s3 = String::from("ahoy");
+    let s4 = s3; // this is move!!!
+
+    println!("Value s4 = {:?}", s4);
 }

@@ -11,6 +11,8 @@ impl Default for Person {
     }
 }
 
+// ------------------------------------------------
+
 pub fn result_type() {
     let correct_json = r#"{"name": "Dodko Dodovič"}"#;
     let first = serde_json::from_str::<Person>(correct_json);
@@ -21,6 +23,8 @@ pub fn result_type() {
     println!("second = {:?}", second);
 }
 
+// ------------------------------------------------
+
 pub fn getting_result() {
     let first = serde_json::from_str::<Person>(r#"{"name": "Dodko Dodovič"}"#);
     let first_inner = first.unwrap_or_default();
@@ -30,6 +34,8 @@ pub fn getting_result() {
     let second_inner = second.unwrap_or_default();
     println!("second's name is {:?}", second_inner.name);
 }
+
+// ------------------------------------------------
 
 pub fn option_type() {
     let nonempty_list = vec!['a', 'b', 'c'];
